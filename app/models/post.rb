@@ -3,3 +3,4 @@ class Post < ActiveRecord::Base
   friendly_id :title, use: :slugged
 end
 
+
