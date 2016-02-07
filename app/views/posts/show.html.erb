@@ -1,29 +1,35 @@
 <div id="post_show_content" class="skinny_wrapper wrapper_padding">
-      <header>
-        <p class="date"><%= @post.created_at.strftime('%A, %B, %d') %> </p>
-        <h1><%= @post.title %></h1>
-        <hr>
-      </header>
+  <header>
+    <p class="date"><%= @post.created_at.strftime('%A, %B, %d') %> </p>
+    <h1><%= @post.title %></h1>
+    <hr>
+  </header>
 
-      <div id="content">
-        <%= markdown @post.content %>
+  <div id="content">
+    <%= markdown @post.content %>
+  </div>
 
-      <hr>
-
-      <div id="share_box">
-        <p>Share Log 1</p>
-        <!-- Twitter -->
-        <a onclick="javascript:window.open('https://twitter.com/share?text=<%= @post.title %> by @john_un - &amp;url=<%= url_for([@post, {only_path: false}])%>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-twitter"></i></a>
-        <!-- Facebook -->
-        <a onclick="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=<%= url_for([@post, {only_path: false}])%>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-facebook"></i></a>
-        <!-- Email -->
-        <a onclick="javascript:window.open('mailto:?subject=I wanted you to see this&amp;body=Check out this post <%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-envelope"></i></a>
-      </div>
-
-      <hr>
-
-      <%= render 'disqus' %>
-
+  <% if user_signed_in? %>
+    <div id="admin_links">
+      <%= link_to "Edit Article", edit_post_path(@post) %>
+      <%= link_to "Delete Article", post_path(@post), method: :delete, data: { confirm: "Are you sure?" } %>
     </div>
+  <% end %>
 
-<%= link_to "Edit", edit_post_path(@post) %>
+  <hr>
+
+  <div id="share_box">
+    <p>Share Log 1</p>
+    <!-- Twitter -->
+    <a onclick="javascript:window.open('https://twitter.com/share?text=<%= @post.title %> by @john_un - &amp;url=<%= url_for([@post, {only_path: false}])%>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-twitter"></i></a>
+    <!-- Facebook -->
+    <a onclick="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=<%= url_for([@post, {only_path: false}])%>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-facebook"></i></a>
+    <!-- Email -->
+    <a onclick="javascript:window.open('mailto:?subject=I wanted you to see this&amp;body=Check out this post <%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-envelope"></i></a>
+  </div>
+
+  <hr>
+
+  <%= render 'disqus' %>
+
+</div>
