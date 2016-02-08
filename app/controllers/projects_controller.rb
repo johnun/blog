@@ -15,7 +15,7 @@ class ProjectsController < ApplicationController
     @project = Project.new project_params
 
     if @project.save
-      redirect_to @project, notice: "Nice Johnny! That project was successfully saved!"
+      redirect_to @project, notice: "Your article was successfully saved!"
     else
       render 'new'
     end
@@ -29,7 +29,7 @@ class ProjectsController < ApplicationController
 
   def update
     if @project.update project_params
-      redirect_to @project, notice: "Nice Johnny! That project was successfully updated!"
+      redirect_to @project, notice: "Your article was successfully updated!"
     else
       rend 'edit'
     end
