@@ -1,3 +1,10 @@
+# Still to do
+  1. Build landing page as default home page.
+  2. Integrate stat tracker.
+  3. Make site SEO friendly.
+  4. Create personal logo.
+  5. Change date stamp to show year.
+
 # Planning our application
   1. Answer Questions
     - What are we building?
