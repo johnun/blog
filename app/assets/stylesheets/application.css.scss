@@ -3,7 +3,7 @@
 $dark: #424652;
 $white: #FFFFFF;
 $light: #9a9da4;
-$highlight: #8bc6db;
+$highlight: #F79696;
 $border: #E9E9E9;
 
 * {
@@ -103,7 +103,7 @@ hr {
     font-size: .8em;
     letter-spacing: 4px;
     text-transform: uppercase;
-    border: 2px solid $border;
+    border: 2px solid $highlight;
     padding: 1rem;
     text-decoration: none;
     color: $dark;
@@ -192,3 +192,4 @@ input[type="submit"], .button {
 @import 'welcome';
 @import 'posts_projects';
 @import 'pygments';
+@import 'splash';
