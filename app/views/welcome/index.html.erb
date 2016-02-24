@@ -14,7 +14,7 @@
 
     <% @posts.each do |post| %>
       <h3><a href="#"><%= link_to post.title, post %></a></h3>
-      <p class="date"><%= post.created_at.strftime("%A, %b, %d") %></p>
+      <p class="date"><%= post.created_at.strftime("%A, %d %b %Y") %></p>
     <% end %>
 
   </div>
@@ -24,7 +24,7 @@
     <hr>
     <% @projects.each do |project| %>
       <h3><a href="#"><%= link_to project.title, project %></a></h3>
-      <p class="date"><%= project.created_at.strftime("%A, %b, %d") %></p>
+      <p class="date"><%= project.created_at.strftime("%A, %d %b %Y") %></p>
     <% end %>
   </div>
   </div>
