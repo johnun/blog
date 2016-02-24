@@ -1,0 +1,11 @@
+.social_buttons {
+  float: center;
+    i {
+      color: $dark;
+      margin-left: 1em;
+      padding-top: 0.2em;
+      &:hover {
+        color: $highlight;
+      }
+    }
+}

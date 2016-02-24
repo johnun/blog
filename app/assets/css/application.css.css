@@ -10,7 +10,7 @@ Error: File to import not found or unreadable: normalize.
 3: $dark: #424652;
 4: $white: #FFFFFF;
 5: $light: #9a9da4;
-6: $highlight: #8bc6db;
+6: $highlight: #F79696;
 
 Backtrace:
 /Users/JUN/blog/app/assets/stylesheets/application.css.scss:1
@@ -39,7 +39,7 @@ Backtrace:
 /Users/JUN/Desktop/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/root_node.rb:36:in `css_tree'
 /Users/JUN/Desktop/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/root_node.rb:20:in `render'
 /Users/JUN/Desktop/CodeKit.app/Contents/Resources/engines/scss/lib/sass/engine.rb:278:in `render'
-/Users/JUN/Desktop/CodeKit.app/Contents/Resources/engines/scss/lib/sass/exec/sass_scss.rb:420:in `run'
+/Users/JUN/Desktop/CodeKit.app/Contents/Resources/engines/scss/lib/sass/exec/sass_scss.rb:423:in `run'
 /Users/JUN/Desktop/CodeKit.app/Contents/Resources/engines/scss/lib/sass/exec/sass_scss.rb:63:in `process_result'
 /Users/JUN/Desktop/CodeKit.app/Contents/Resources/engines/scss/lib/sass/exec/base.rb:52:in `parse'
 /Users/JUN/Desktop/CodeKit.app/Contents/Resources/engines/scss/lib/sass/exec/base.rb:19:in `parse!'
@@ -48,4 +48,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: normalize.\A        Load paths:\A          /Users/JUN/blog/app/assets/stylesheets\A          Sass::Globbing::Importer\A         on line 1 of /Users/JUN/blog/app/assets/stylesheets/application.css.scss\A \A 1: @import 'normalize';\A 2: \A 3: $dark: #424652;\A 4: $white: #FFFFFF;\A 5: $light: #9a9da4;\A 6: $highlight: #8bc6db;"; }
+  content: "Error: File to import not found or unreadable: normalize.\A        Load paths:\A          /Users/JUN/blog/app/assets/stylesheets\A          Sass::Globbing::Importer\A         on line 1 of /Users/JUN/blog/app/assets/stylesheets/application.css.scss\A \A 1: @import 'normalize';\A 2: \A 3: $dark: #424652;\A 4: $white: #FFFFFF;\A 5: $light: #9a9da4;\A 6: $highlight: #F79696;"; }
