@@ -7,7 +7,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <%= render 'layouts/google_analytics' %>
+  <%= render partial: "partials/google_analytics" %>
 </head>
 <body>
   <header id="main_navigation" class="clearfix">
@@ -39,5 +39,6 @@
       <a href="http://github.com/johnun" target="_blank"><i class="fa fa-github"></i></a>
     </nav>
   </footer>
+<%= render partial: "partials/google_analytics_pageview" %>
 </body>
 </html>
