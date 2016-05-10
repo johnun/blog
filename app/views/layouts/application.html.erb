@@ -18,7 +18,8 @@
       <%= link_to "get in touch", new_contact_path %>
       <% if user_signed_in? %>
         <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-        <%= link_to "projects", projects_path %> <%-# Project Page hidden until I have more projects to showcase. -%>
+        <%= link_to "projects", projects_path %> 
+        <%# Project Page hidden until I have more projects to showcase. %>
       <% end %>
     </nav>
   </header>
