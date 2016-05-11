@@ -1,6 +1,12 @@
 <div class="wrapper wrapper_padding clearfix">
+  <div class="hero">
+  <h1>Hello!</h1>
+    <p>This is John. I'm a professional clock-puncher by day and an aspiring Ruby programmer by night. When I'm not in front of my laptop screen, I listen to rap music while keeping tabs on twitter Kanye.</p>
+    <p> <%= link_to "Tag along", welcome_index_path, {:style=>'text-decoration:none' }%> as I journey into the realms of programming abyss.</p>
+  </div>
+  
   <div class ="col-1 about homepage_content">
-    <h2>About</h2>
+    <h2>About This Blog</h2>
     <hr>
     <p>Hi! This is John, and welcome to my personal blog.</p>
     <p>This is where you can keep tabs on my life as an aspiring programmer. I try my best to document my learning journey in complete detail and transparency.</p>
@@ -9,23 +15,12 @@
     <p>Please say <a href="#"><%= link_to "hello", new_contact_path %></a> if you stumble upon this blog as the journey can be lonely sometimes. As you can see, this blog is a work in progress, and is something I hope will grow together with the advancement of my programming skills.</p>
   </div>
   <div class="col-2 homepage_content">
-    <h2>Logs</h2>
+    <h2>Recent Posts</h2>
     <hr>
 
     <% @posts.each do |post| %>
       <h3><a href="#"><%= link_to post.title, post %></a></h3>
       <p class="date"><%= post.created_at.strftime("%A, %d %b %Y") %></p>
     <% end %>
-
-  </div>
-  
-  <div class="col-3 homepage_content">
-    <h2>Projects</h2>
-    <hr>
-    <% @projects.each do |project| %>
-      <h3><a href="#"><%= link_to project.title, project %></a></h3>
-      <p class="date"><%= project.created_at.strftime("%A, %d %b %Y") %></p>
-    <% end %>
-  </div>
   </div>
 </div>

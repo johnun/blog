@@ -3,11 +3,16 @@
 }
 
 .col-1 {
-  width: 45%;
+  width: 60%;
   padding: 0 5% 0 2.5%;
 }
 
-.col-2, .col-3 {
+.col-2{
+  width: 40%;
+  padding: 0 2.5%;
+}
+
+.col-3 {
   width: 27.5%;
   padding: 0 2.5%;
 }
@@ -15,7 +20,7 @@
 .homepage_content {
   h2 {
     font-size: 1.1rem;
-    text-transform: uppercase;
+    text-transform: capitalize;
   }
   h3 {
     font-size: 1.35em;
