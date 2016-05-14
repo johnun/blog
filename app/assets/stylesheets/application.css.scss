@@ -1,9 +1,9 @@
 @import 'normalize';
 
-$dark: #424652;
+$dark: #333333;
 $white: #FFFFFF;
 $light: #9a9da4;
-$highlight: #F79696;
+$highlight: #EF503B;
 $border: #E9E9E9;
 
 * {
@@ -100,22 +100,16 @@ hr {
 }
 
 #main_navigation {
-  padding: 2.5em 5%;
+  padding: 0.5em 5%;
   border-bottom: 1px solid $border;
-  .name {
-    font-weight: 700;
-    font-size: .8em;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    border: 2px solid $highlight;
-    padding: 1rem;
-    text-decoration: none;
-    color: $dark;
-    float: left;
+  .name img{
+    width: 10%;
+    height: auto;
+    float: center;
   }
   nav {
     float: right;
-    padding-top: 1.5rem;
+    padding-top: 2.5rem;
     a {
       color: $dark;
       text-decoration: none;
