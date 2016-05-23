@@ -78,6 +78,30 @@
   }
 }
 
+#prev_post {
+  font-weight: 700;
+  font-size: .8em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $dark;
+  float: left;
+  &:hover {
+    color: $highlight;
+  }
+}
+
+#next_post {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: .8em;
+  text-transform: uppercase;
+  color: $dark;
+  float: right;
+  &:hover {
+    color: $highlight;
+  }
+}
+
 // - - - - - - Pagination
 .pagination:before,
 .pagination:after {
