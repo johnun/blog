@@ -3,12 +3,13 @@ class Post < ActiveRecord::Base
   friendly_id :title, use: :slugged
 
   def prev
-    Post.where("id < ?", id).limit(1).last
+    Post.where("id < ?", id).limit(1).first
   end
-  
+
   def next
     Post.where("id > ?", id).limit(1).first
   end
+
 end
 
 
