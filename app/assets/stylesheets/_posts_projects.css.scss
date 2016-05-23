@@ -84,7 +84,7 @@
   text-transform: uppercase;
   text-decoration: none;
   color: $dark;
-  float: left;
+  float: right;
   &:hover {
     color: $highlight;
   }
@@ -96,7 +96,7 @@
   font-size: .8em;
   text-transform: uppercase;
   color: $dark;
-  float: right;
+  float: left;
   &:hover {
     color: $highlight;
   }
