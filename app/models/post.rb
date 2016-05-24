@@ -2,12 +2,12 @@ class Post < ActiveRecord::Base
   extend FriendlyId
   friendly_id :title, use: :slugged
 
-  def prev
-    Post.where("id < ?", id).limit(1).first
+  def next
+    self.class.unscoped.where("created_at <= ? AND id != ?", created_at, id).order("created_at DESC").first
   end
 
-  def next
-    Post.where("id > ?", id).limit(1).first
+  def previous
+    self.class.unscoped.where("created_at >= ? AND id != ?", created_at, id).order("created_at ASC").first
   end
 
 end

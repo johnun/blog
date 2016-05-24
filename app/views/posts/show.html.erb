@@ -28,8 +28,8 @@
     <a onclick="javascript:window.open('mailto:?subject=I wanted you to see this&amp;body=Check out this post <%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-envelope"></i></a>
   </div>
   
-  <%= link_to "Older Post ⇨", @post.prev, id: "prev_post" %>
-  <%= link_to "⇦ Newer Post", @post.next, id: "next_post" %>
+  <%= link_to "Next Post ⇨", @post.next, id: "next_post" if @post.next %>
+  <%= link_to "⇦ Previous Post", @post.previous, id: "prev_post" if @post.previous %>
 
   <hr>
 
